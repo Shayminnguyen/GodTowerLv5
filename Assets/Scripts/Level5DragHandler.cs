@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Level5DragHandler : MonoBehaviour,IDragHandler
 {
-    private int MAP_SIZE_X = 4;
-    private int MAP_SIZE_Y = 3;
+    private int CANVAS_SIZE_X = 555;
+    private int CANVAS_SIZE_Y = 480;
 
     //private int MapX = 555;
     //private int MapY = 588;
@@ -37,8 +37,8 @@ public class Level5DragHandler : MonoBehaviour,IDragHandler
 
         //p.x = Mathf.Clamp(p.x, -MAP_SIZE_X, MAP_SIZE_X);
         //p.y = Mathf.Clamp(p.y, -MAP_SIZE_Y, MAP_SIZE_Y);
-        p.x = Mathf.Clamp(p.x, -277, 277);
-        p.y = Mathf.Clamp(p.y, -294, 294);
+        p.x = Mathf.Clamp(p.x, -CANVAS_SIZE_X/2, CANVAS_SIZE_X/2);
+        p.y = Mathf.Clamp(p.y, -CANVAS_SIZE_Y/2, CANVAS_SIZE_Y/2);
         image.transform.localPosition = p;
     }
 
